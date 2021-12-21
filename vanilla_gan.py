@@ -1,5 +1,5 @@
 import tensorflow as tf
-from tensorflow.keras.models import *
+from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import *
 
 input_shape = (28,28,1)

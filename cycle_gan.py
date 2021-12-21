@@ -1,4 +1,4 @@
-from tensorflow.keras.models import *
+from tensorflow.keras.models import Model, Sequential
 from tensorflow.keras.layers import *
 from tensorflow_addons.layers import *
 import tensorflow as tf

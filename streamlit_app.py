@@ -200,7 +200,6 @@ else:
                         images,_ = generate_fake(samples, generator_A_B,n_batch,0)
                     cols = st.columns(len(images))
                     images = images.numpy()
-                    st.write(images.shape)
                     for x in range(len(images)):
                         fig,ax = plt.subplots()
                         ax.imshow(images[x])
