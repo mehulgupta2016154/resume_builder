@@ -16,7 +16,6 @@ from graph_builder import *
 import tensorflow as tf
 from cycle_gan import model_loader, preprocess, generate_real, generate_fake, n_batch
 from vanilla_gan import return_decoder
-import os
 
 st.set_page_config(page_title='mehul gupta\'s career snapshot' ,layout="wide",page_icon=':boy:')
 
@@ -88,10 +87,7 @@ def plot_bar():
 
 def image_and_status_loader(image_list,index=0):
     if index==0:
-        current_dir = os.getcwd()
-        st.write(os.listdir('.'))
-        st.write(current_dir+'/'+image_list[0]['path'])
-        img = Image.open(current_dir+'/'+image_list[0]['path'])
+        img = Image.open(image_list[0]['path'])
         st.image(img,caption=image_list[0]['caption'],width=image_list[0]['width'])
        
     else:
