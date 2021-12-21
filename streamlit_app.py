@@ -89,6 +89,7 @@ def plot_bar():
 def image_and_status_loader(image_list,index=0):
     if index==0:
         current_dir = os.getcwd()
+        st.write(os.listdir('.'))
         st.write(current_dir+'/'+image_list[0]['path'])
         img = Image.open(current_dir+'/'+image_list[0]['path'])
         st.image(img,caption=image_list[0]['caption'],width=image_list[0]['width'])
