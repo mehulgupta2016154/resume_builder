@@ -23,7 +23,7 @@ def discriminator(input_dim,depth,kernel):
             layers.append(Dropout(0.2))
     layers.append(Conv2D(1,kernel_size=kernel))
     model = Sequential(layers)
-    model.compile(loss='mse',=tf.keras.optimizers.Adam())
+    model.compile(loss='mse',optimizer=tf.keras.optimizers.Adam())
     return model
 
 def generator(input_dim, depth, kernel):
