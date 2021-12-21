@@ -13,9 +13,9 @@ import io
 import matplotlib.pyplot as plt
 import streamlit.components.v1 as components
 from graph_builder import *
-from vanilla_gan import return_decoder
 import tensorflow as tf
 from cycle_gan import model_loader, preprocess, generate_real, generate_fake, n_batch
+from vanilla_gan import return_decoder
 
 st.set_page_config(page_title='mehul gupta\'s career snapshot' ,layout="wide",page_icon=':boy:')
 
