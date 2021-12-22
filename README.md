@@ -26,4 +26,5 @@ A streamlit based webapp deployed at [here](https://share.streamlit.io/mehulgupt
 * requirements.txt : requirements file generated using [pipreqs](https://pypi.org/project/pipreqs/)
 * graph_builder.py : Daily routine graph using graphviz
 * timeline.json : Json file used by streamlit_timeline for career snapshot
+![Preview](https://user-images.githubusercontent.com/31255225/147141813-f3d27436-8b94-4ea3-a6dc-dbe804395ff6.png)
 
