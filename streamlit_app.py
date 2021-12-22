@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import streamlit.components.v1 as components
 from graph_builder import *
 import tensorflow as tf
-from cycle_gan import model_loader, preprocess, generate_real, generate_fake, n_batch
+from cycle import *
 from vanilla_gan import return_decoder
 
 st.set_page_config(page_title='mehul gupta\'s career snapshot' ,layout="wide",page_icon=':boy:')
@@ -111,11 +111,12 @@ def image_and_status_loader(image_list,index=0):
 
 def paper_summary(index):
     st.markdown('<h5><u>'+paper_info['name'][index]+'</h5>',unsafe_allow_html=True)
-    with st.expander('See detailed version...'):
+    st.caption(paper_info['role'][index])
+    st.caption(paper_info['journal'][index]+' , '+paper_info['publication'][index]+' , '+paper_info['year'][index])
+    with st.expander('detailed description'):
         with st.spinner(text="Loading details..."):
-                st.caption(paper_info['role'][index]+','+paper_info['year'][index])
                 st.write(paper_info['Summary'][index])
-                pdfFileObj = open(paper_info['file'][index], 'rb')
+                pdfFileObj = open('pdfs/{}'.format(paper_info['file'][index]), 'rb')
                 image_and_status_loader(paper_info['images'][str(index)], index)
                 if index==0:
                     rpa_metrics['time_improvement'] = rpa_metrics['non-ds']-rpa_metrics['ds']
@@ -179,40 +180,37 @@ if selection == models[0]:
                     fig,ax = plt.subplots()
                     ax.imshow(img)
                     columns[index_].pyplot(fig)
-else:
-    
-    generator_A_B,generator_B_A = model_loader()
-    input_ = st.selectbox('Which transition you wish to try',cycle_models)
-    if input_:
-            with st.spinner('loading random samples generated...'):
-                    data = []
-                    for images in cycle_model_url[input_]:
+                    
+elif selection==models[1]:
+    selected_model = st.selectbox('select one transition',cycle_models) 
+    with st.spinner('loading default sample ...'):
+                    data_ = []
+                    for images in cycle_model_url[selected_model]:
+                            
                             response = requests.get(images)
                             img = Image.open(io.BytesIO(response.content))
-                            data.append(np.array(img.resize((128,128))))
-                    st.image(data,caption=[x for x in range(len(cycle_model_url[input_]))],clamp=True,width=200)
-                    selection = st.multiselect('Choose one/multiple images to transit',[x for x in range(len(cycle_model_url[input_]))])
-                    if selection:
-                            data = [data[int(x)] for x in selection]
-
-                            dataset = tf.data.Dataset.from_tensor_slices({'image':data})
-                            dataset = dataset.map(preprocess).batch(n_batch).__iter__()
-                            samples,_ = generate_real(next(dataset),n_batch,0)
-                            if input_== cycle_models[0]:
-                                images,_ = generate_fake(samples, generator_B_A,n_batch,0)
-                            else:
-                                images,_ = generate_fake(samples, generator_A_B,n_batch,0)
-                            cols = st.columns(len(images))
-                            images = images.numpy()
-                            for x in range(len(images)):
-                                fig,ax = plt.subplots()
-                                ax.imshow(images[x])
-                                cols[x].pyplot(fig,use_column_width=True)
+                            image = img.resize((128,128))
+                            data_.append(np.array(image))
+                            
+                    st.image(data_,caption=[x for x in range(len(data_))],width=250,clamp=True)
+                    selected_images = st.multiselect('Choose images for transition',[x for x in range(len(data_))])
+                    if selected_images:
+                            with st.spinner('loading translated images...'):
+                                    data_ = [data_[int(x)] for x in selected_images]
+                                    dataset = tf.data.Dataset.from_tensor_slices({'image':data_})
+                                    dataset = dataset.map(preprocess).batch(n_batch).__iter__()
+                                    samples,_ = generate_real(next(dataset),n_batch,0)
+                                    if selected_model==cycle_models[0]:
+                                        images,_ = generate_fake(samples, generator_A_B,n_batch,0)
+                                    elif selected_model==cycle_models[1]:
+                                        images,_ = generate_fake(samples, generator_B_A,n_batch,0)
+                                    images = images.numpy()
+                                    st.image(images,clamp=True,width=250)
 
 st.sidebar.caption('Wish to connect?')
 st.sidebar.write('📞: 8103795345')
 st.sidebar.write('📧: mehulgupta2016154@gmail.com')
-pdfFileObj = open('mehul_gupta_resume.pdf', 'rb')
+pdfFileObj = open('pdfs/mehul_gupta_resume.pdf', 'rb')
 st.sidebar.download_button('download resume',pdfFileObj,file_name='mehul_gupta_resume.pdf',mime='pdf')
 
         

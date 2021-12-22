@@ -5,6 +5,19 @@ from tensorflow.keras.layers import *
 from tensorflow_addons.layers import *
 import tensorflow as tf
 import numpy as np
+import os
+from PIL import Image
+
+def preprocess(records):
+    images =  records['image']
+    images = tf.cast(images, tf.float32)/255.0
+    return images
+
+def tf_pipeline(dataset):
+    dataset = tf.data.Dataset.from_tensor_slices({'image':dataset})
+    dataset = dataset.map(preprocess)
+    dataset = dataset.repeat().shuffle(100).batch(16).prefetch(1)
+    return dataset
 
 input_dim = (128,128,3)
 depth = 4
@@ -25,6 +38,9 @@ def discriminator(input_dim,depth,kernel):
     model = Sequential(layers)
     model.compile(loss='mse',optimizer=tf.keras.optimizers.Adam())
     return model
+
+discriminator_A = discriminator(input_dim,depth,kernel)
+discriminator_B = discriminator(input_dim,depth,kernel)
 
 def generator(input_dim, depth, kernel):
     layers = []
@@ -47,6 +63,8 @@ def generator(input_dim, depth, kernel):
     model = Sequential(layers)
     return model
 
+generator_A_B = generator(input_dim,depth,kernel)
+generator_B_A = generator(input_dim,depth,kernel)
 
 def composite_model(g1,d,g2,image_dim):
     g1.trainable = True
@@ -73,6 +91,9 @@ def composite_model(g1,d,g2,image_dim):
     model.compile(loss=['mse','mae','mae','mae'],loss_weights=[1,5,10,10],optimizer=tf.keras.optimizers.Adam())
     return model
 
+composite_A_B = composite_model(generator_A_B, discriminator_B, generator_B_A, input_dim)
+composite_B_A = composite_model(generator_B_A, discriminator_A, generator_A_B, input_dim)
+
 def generate_real(dataset, batch_size,patch_size):
     labels = np.ones((batch_size,patch_size,patch_size,1))
     return dataset,labels
@@ -82,41 +103,9 @@ def generate_fake(dataset,g,batch_size,patch_size):
     labels = np.zeros((batch_size,patch_size,patch_size,1))
     return predicted,labels
 
-def preprocess(records):
-    images =  records['image']
-    images = tf.cast(images, tf.float32)/255.0
-    return images
 
-def model_loader():
-    discriminator_A = discriminator(input_dim,depth,kernel)
-    discriminator_B = discriminator(input_dim,depth,kernel)
-
-    generator_A_B = generator(input_dim,depth,kernel)
-    generator_B_A = generator(input_dim,depth,kernel)
-
-    composite_A_B = composite_model(generator_A_B, discriminator_B, generator_B_A, input_dim)
-    composite_B_A = composite_model(generator_B_A, discriminator_A, generator_A_B, input_dim)
-    
-    checkpoint = tf.train.Checkpoint(generator_A_B=generator_A_B, generator_B_A=generator_B_A,discriminator_A=discriminator_A,discriminator_B=discriminator_B,composite_A_B=composite_A_B, composite_B_A=composite_B_A)
-    
-    latest = tf.train.latest_checkpoint('cycle_gans/')
-    checkpoint.restore(latest)
-    
-    
-    generator_A_B.load_weights = checkpoint.generator_A_B.weights
-    generator_B_A.load_weights = checkpoint.generator_B_A.weights
-    
-    return generator_A_B, generator_B_A
-    
-    
-
-
-
-
-    
-
-
-
-
-
-
+checkpoint_dir = './cyclegan'
+checkpoint_prefix = os.path.join(checkpoint_dir, "ckpt")
+checkpoint = tf.train.Checkpoint(generator_A_B=generator_A_B, generator_B_A=generator_B_A,discriminator_A=discriminator_A,discriminator_B=discriminator_B,composite_A_B=composite_A_B, composite_B_A=composite_B_A)
+manager = tf.train.CheckpointManager(checkpoint, 'cyclegan', max_to_keep=3)
+checkpoint.restore(manager.latest_checkpoint)
