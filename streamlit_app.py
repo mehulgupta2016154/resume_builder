@@ -212,7 +212,6 @@ elif selection==models[1]:
                         st.image(images,clamp=True,width=250)
 
 st.sidebar.caption('Wish to connect?')
-st.sidebar.write('📞: 8103795345')
 st.sidebar.write('📧: mehulgupta2016154@gmail.com')
 pdfFileObj = open('pdfs/mehul_gupta_resume.pdf', 'rb')
 st.sidebar.download_button('download resume',pdfFileObj,file_name='mehul_gupta_resume.pdf',mime='pdf')
