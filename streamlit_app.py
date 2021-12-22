@@ -35,6 +35,7 @@ with st.spinner(text="Building line"):
         data = f.read()
         timeline(data, height=500)
 
+
 st.subheader('Skills & Tools ⚒️')
 def skill_tab():
     rows,cols = len(info['skills'])//skill_col_size,skill_col_size
@@ -48,7 +49,8 @@ def skill_tab():
                 columns[index_].button(next(skills))
             except:
                 break
-skill_tab()
+with st.spinner(text="Loading section..."):
+    skill_tab()
 
 
 st.subheader('Education 📖')
@@ -56,12 +58,12 @@ st.subheader('Education 📖')
 fig = go.Figure(data=[go.Table(
     header=dict(values=list(info['edu'].columns),
                 fill_color='paleturquoise',
-                align='left',height=75,font_size=20),
+                align='left',height=65,font_size=20),
     cells=dict(values=info['edu'].transpose().values.tolist(),
                fill_color='lavender',
-               align='left',height=50,font_size=15))])
+               align='left',height=40,font_size=15))])
 
-fig.update_layout(width=800, height=400)
+fig.update_layout(width=750, height=400)
 st.plotly_chart(fig)
 st.subheader('Research Papers 📝')
 
@@ -110,17 +112,18 @@ def image_and_status_loader(image_list,index=0):
 def paper_summary(index):
     st.markdown('<h5><u>'+paper_info['name'][index]+'</h5>',unsafe_allow_html=True)
     with st.expander('See detailed version...'):
-        st.caption(paper_info['role'][index]+','+paper_info['year'][index])
-        st.write(paper_info['Summary'][index])
-        pdfFileObj = open(paper_info['file'][index], 'rb')
-        image_and_status_loader(paper_info['images'][str(index)], index)
-        if index==0:
-            rpa_metrics['time_improvement'] = rpa_metrics['non-ds']-rpa_metrics['ds']
-            st.markdown('**Time taken per order involving Rx in seconds** (green indicates improvements from baseline)')
-            cols = st.columns(3)
-            for index_, row in rpa_metrics.iterrows():
-                cols[index_].metric(row['category'],str(row['ds'])+'s',delta=str(round(row['time_improvement'],1))+'s' )
-        st.download_button('download paper',pdfFileObj,file_name=paper_info['name'][index],mime='pdf')
+        with st.spinner(text="Loading details..."):
+                st.caption(paper_info['role'][index]+','+paper_info['year'][index])
+                st.write(paper_info['Summary'][index])
+                pdfFileObj = open(paper_info['file'][index], 'rb')
+                image_and_status_loader(paper_info['images'][str(index)], index)
+                if index==0:
+                    rpa_metrics['time_improvement'] = rpa_metrics['non-ds']-rpa_metrics['ds']
+                    st.markdown('**Time taken per order involving Rx in seconds** (green indicates improvements from baseline)')
+                    cols = st.columns(3)
+                    for index_, row in rpa_metrics.iterrows():
+                        cols[index_].metric(row['category'],str(row['ds'])+'s',delta=str(round(row['time_improvement'],1))+'s' )
+                st.download_button('download paper',pdfFileObj,file_name=paper_info['file'][index],mime='pdf')
     
 
 
@@ -145,7 +148,7 @@ cols[1].metric('Following',following)
 cols[2].metric('Publication followers',pub_followers)
 
 with st.expander('Read my latest blogs here...'):
-    with st.spinner(text="Loading blogs.."):
+    with st.spinner(text="Loading blogs..."):
         components.html(embed_component['medium'],height=900)
         
 st.subheader('Daily routine as Data Scientist')
@@ -181,29 +184,36 @@ else:
     generator_A_B,generator_B_A = model_loader()
     input_ = st.selectbox('Which transition you wish to try',cycle_models)
     if input_:
-            data = []
-            for images in cycle_model_url[input_]:
-                    response = requests.get(images)
-                    img = Image.open(io.BytesIO(response.content))
-                    data.append(np.array(img.resize((128,128))))
-            st.image(data,caption=[x for x in range(len(cycle_model_url[input_]))],clamp=True,width=200)
-            selection = st.multiselect('Choose one/multiple images to transit',[x for x in range(len(cycle_model_url[input_]))])
-            if selection:
-                    data = [data[int(x)] for x in selection]
+            with st.spinner('loading random samples generated...'):
+                    data = []
+                    for images in cycle_model_url[input_]:
+                            response = requests.get(images)
+                            img = Image.open(io.BytesIO(response.content))
+                            data.append(np.array(img.resize((128,128))))
+                    st.image(data,caption=[x for x in range(len(cycle_model_url[input_]))],clamp=True,width=200)
+                    selection = st.multiselect('Choose one/multiple images to transit',[x for x in range(len(cycle_model_url[input_]))])
+                    if selection:
+                            data = [data[int(x)] for x in selection]
 
-                    dataset = tf.data.Dataset.from_tensor_slices({'image':data})
-                    dataset = dataset.map(preprocess).batch(n_batch).__iter__()
-                    samples,_ = generate_real(next(dataset),n_batch,0)
-                    if input_== cycle_models[0]:
-                        images,_ = generate_fake(samples, generator_B_A,n_batch,0)
-                    else:
-                        images,_ = generate_fake(samples, generator_A_B,n_batch,0)
-                    cols = st.columns(len(images))
-                    images = images.numpy()
-                    for x in range(len(images)):
-                        fig,ax = plt.subplots()
-                        ax.imshow(images[x])
-                        cols[x].pyplot(fig,use_column_width=True)
+                            dataset = tf.data.Dataset.from_tensor_slices({'image':data})
+                            dataset = dataset.map(preprocess).batch(n_batch).__iter__()
+                            samples,_ = generate_real(next(dataset),n_batch,0)
+                            if input_== cycle_models[0]:
+                                images,_ = generate_fake(samples, generator_B_A,n_batch,0)
+                            else:
+                                images,_ = generate_fake(samples, generator_A_B,n_batch,0)
+                            cols = st.columns(len(images))
+                            images = images.numpy()
+                            for x in range(len(images)):
+                                fig,ax = plt.subplots()
+                                ax.imshow(images[x])
+                                cols[x].pyplot(fig,use_column_width=True)
+
+st.sidebar.caption('Wish to connect?')
+st.sidebar.write('📞: 8103795345')
+st.sidebar.write('📧: mehulgupta2016154@gmail.com')
+pdfFileObj = open('mehul_gupta_resume.pdf', 'rb')
+st.sidebar.download_button('download resume',pdfFileObj,file_name='mehul_gupta_resume.pdf',mime='pdf')
 
         
 
