@@ -156,34 +156,39 @@ st.subheader('Daily routine as Data Scientist')
 st.graphviz_chart(graph)
 
 st.subheader('Time for some ML')
+st.caption('As training GANs is a computation wise heavy task, the below 2 models have been trained just to produce acceptable results for the sake of demonstration')
         
 selection = st.radio('Choose one of the two models',models)
 if selection == models[0]:
     input_ = st.slider('How many random samples you wish to generate?',0,15)
-    with st.spinner('loading random samples generated...'):
-            noise = tf.random.normal((input_,4),mean=0,stddev=1)
-            decoder_v = return_decoder()
-            images = iter(decoder_v(noise,training=False))
-            row, cols = input_//4,input_%4
-            if cols:
-                row+=1
-            for x in range(row):
-                if (x-1)<row:
-                    columns = st.columns(4)
-                else:
-                    columns = st.columns(cols)
-                for index_ in range(len(columns)):
-                    try:
-                        img = next(images)
-                    except:
-                        break
-                    fig,ax = plt.subplots()
-                    ax.imshow(img)
-                    columns[index_].pyplot(fig)
+    if input_:
+        with st.spinner('loading random samples generated...'):
+                noise = tf.random.normal((input_,4),mean=0,stddev=1)
+                st.caption('random noise array generated')
+                st.write(noise.numpy())
+                decoder_v = return_decoder()
+                images = iter(decoder_v(noise,training=False))
+                row, cols = input_//4,input_%4
+                if cols:
+                    row+=1
+                for x in range(row):
+                    if (x-1)<row:
+                        columns = st.columns(4)
+                    else:
+                        columns = st.columns(cols)
+                    for index_ in range(len(columns)):
+                        try:
+                            img = next(images)
+                        except:
+                            break
+                        fig,ax = plt.subplots()
+                        ax.imshow(img)
+                        columns[index_].pyplot(fig)
                     
 elif selection==models[1]:
     selected_model = st.selectbox('select one transition',cycle_models) 
-    with st.spinner('loading default sample ...'):
+    if selected_model:
+        with st.spinner('loading default sample ...'):
                     data_ = []
                     for images in cycle_model_url[selected_model]:
                             
@@ -193,19 +198,18 @@ elif selection==models[1]:
                             data_.append(np.array(image))
                             
                     st.image(data_,caption=[x for x in range(len(data_))],width=250,clamp=True)
-                    selected_images = st.multiselect('Choose images for transition',[x for x in range(len(data_))])
+                    selected_images = st.multiselect('Choose images for transition',[x+1 for x in range(len(data_))])
                     if selected_images:
-                            with st.spinner('loading translated images...'):
-                                    data_ = [data_[int(x)] for x in selected_images]
-                                    dataset = tf.data.Dataset.from_tensor_slices({'image':data_})
-                                    dataset = dataset.map(preprocess).batch(n_batch).__iter__()
-                                    samples,_ = generate_real(next(dataset),n_batch,0)
-                                    if selected_model==cycle_models[0]:
-                                        images,_ = generate_fake(samples, generator_A_B,n_batch,0)
-                                    elif selected_model==cycle_models[1]:
+                        data_=[data_[int(x)-1] for x in selected_images]
+                        dataset = tf.data.Dataset.from_tensor_slices({'image':data_})
+                        dataset = dataset.map(preprocess).batch(n_batch).__iter__()
+                        samples,_ = generate_real(next(dataset),n_batch,0)
+                        if selected_model==cycle_models[0]:
                                         images,_ = generate_fake(samples, generator_B_A,n_batch,0)
-                                    images = images.numpy()
-                                    st.image(images,clamp=True,width=250)
+                        elif selected_model==cycle_models[1]:
+                                        images,_ = generate_fake(samples, generator_A_B,n_batch,0)
+                        images = images.numpy()
+                        st.image(images,clamp=True,width=250)
 
 st.sidebar.caption('Wish to connect?')
 st.sidebar.write('📞: 8103795345')
