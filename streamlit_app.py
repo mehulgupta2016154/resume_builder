@@ -156,7 +156,7 @@ st.subheader('Daily routine as Data Scientist')
 st.graphviz_chart(graph)
 
 st.subheader('Time for some ML')
-st.caption('As training GANs is a computation wise heavy task, the below 2 models have been trained just to produce acceptable results for the sake of demonstration')
+st.caption('As training GANs is a computationally heavy task, the below 2 models have been trained just to produce acceptable results for the sake of demonstration')
         
 selection = st.radio('Choose one of the two models',models)
 if selection == models[0]:
