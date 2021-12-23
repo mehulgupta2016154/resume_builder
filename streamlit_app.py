@@ -17,7 +17,7 @@ import tensorflow as tf
 from cycle import *
 from vanilla_gan import return_decoder
 
-st.set_page_config(page_title='mehul gupta\'s career snapshot' ,layout="wide",page_icon=':boy:')
+st.set_page_config(page_title='mehul gupta\'s portfolio' ,layout="wide",page_icon='👨‍🔬')
 
 
 with st.sidebar:
