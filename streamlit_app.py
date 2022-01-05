@@ -192,8 +192,8 @@ elif selection==models[1]:
                     data_ = []
                     for images in cycle_model_url[selected_model]:
                             
-                            response = requests.get(images)
-                            img = Image.open(io.BytesIO(response.content))
+          
+                            img = Image.open(images)
                             image = img.resize((128,128))
                             data_.append(np.array(image))
                             
