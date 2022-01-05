@@ -9,7 +9,7 @@ paper_info = {'name':['Attended RPA of prescriptions','Algorithms for rapid digi
 
 models = ('Fashion MNIST samples using GAN','Cycle GAN for Image Translation')
 cycle_models = ('Winter to Summer','Summer to Winter')
-cycle_model_url = {cycle_models[0]:['images/winter1.jpg'.'images/winter2.jpg'.'images/winter3.jpg'],cycle_models[1]:['images/summer1.jpg'.'images/summer2.jpg','images/summer3.jpg'}
+cycle_model_url = {cycle_models[0]:['images/winter1.jpg'.'images/winter2.jpg'.'images/winter3.jpg'],cycle_models[1]:['images/summer1.jpg'.'images/summer2.jpg','images/summer3.jpg']}
 
 rpa_metrics = pd.DataFrame([['Overall',66.4, 72.5],['printed rx',54.6, 64.6],['handwritten',67.3,73.3]], columns=['category','ds','non-ds'])
 rapid_metrics = pd.DataFrame([['printed',91.6,70,79.4],['handwritten',21.1,34.7,26.2],['Brute-Force_Printed',29.9,82.7,41.8],['Brute-Force_Handwritten',0.2,62,0.3]],columns=['category','precision','recall','f1_score'])
