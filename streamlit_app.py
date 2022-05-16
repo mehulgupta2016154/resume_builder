@@ -27,7 +27,9 @@ st.sidebar.markdown(info['Stackoverflow_flair'],unsafe_allow_html=True)
 st.subheader('Summary')
 st.write(info['Brief'])
 
+
 st.subheader('Career snapshot')
+
 
     
 with st.spinner(text="Building line"):
@@ -148,9 +150,8 @@ cols[0].metric('Followers',followers)
 cols[1].metric('Following',following)
 cols[2].metric('Publication followers',pub_followers)
 
-with st.expander('Read my latest blogs here...'):
-    with st.spinner(text="Loading blogs..."):
-        components.html(embed_component['medium'],height=900)
+with st.expander('read my latest blogs below'):
+    components.html(embed_component['medium'],height=360)
         
 st.subheader('Daily routine as Data Scientist')
 st.graphviz_chart(graph)
@@ -215,6 +216,8 @@ st.sidebar.caption('Wish to connect?')
 st.sidebar.write('📧: mehulgupta2016154@gmail.com')
 pdfFileObj = open('pdfs/mehul_gupta_resume.pdf', 'rb')
 st.sidebar.download_button('download resume',pdfFileObj,file_name='mehul_gupta_resume.pdf',mime='pdf')
+
+
 
         
 
