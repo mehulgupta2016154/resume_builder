@@ -139,6 +139,7 @@ st.markdown('<ul>'+achievement_list+'</ul>',unsafe_allow_html=True)
 
 
 st.subheader('Medium Profile ✍️')
+st.markdown("""<a href={}> access full profile here</a>""".format(info['Medium']),unsafe_allow_html=True)
 page1,page2 = requests.get(info['Medium']), requests.get(info['publication_url'])
 
 followers = re.findall('(\d+) Followers',page1.text)[0]
@@ -151,7 +152,7 @@ cols[1].metric('Following',following)
 cols[2].metric('Publication followers',pub_followers)
 
 with st.expander('read my latest blogs below'):
-    components.html(embed_component['medium'],height=360)
+    components.html(embed_component['medium'],height=500)
         
 st.subheader('Daily routine as Data Scientist')
 st.graphviz_chart(graph)
