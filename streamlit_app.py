@@ -16,6 +16,7 @@ from graph_builder import *
 import tensorflow as tf
 from cycle import *
 from vanilla_gan import return_decoder
+from streamlit_player import st_player
 
 st.set_page_config(page_title='mehul gupta\'s portfolio' ,layout="wide",page_icon='👨‍🔬')
 
@@ -146,6 +147,8 @@ followers = re.findall('(\d+) Followers',page1.text)[0]
 following = re.findall('(\d+) Following',page1.text)[0]
 pub_followers = re.findall('Followers (?:\w+\s+){4}(\d+)',re.sub('\W+',' ', page2.text ))[0]
 
+
+st_player("https://www.youtube.com/channel/UCQoNosQTIxiMTL9C-gvFdjA")
 cols = st.columns(3)
 cols[0].metric('Followers',followers)
 cols[1].metric('Following',following)
