@@ -147,8 +147,7 @@ followers = re.findall('(\d+) Followers',page1.text)[0]
 following = re.findall('(\d+) Following',page1.text)[0]
 pub_followers = re.findall('Followers (?:\w+\s+){4}(\d+)',re.sub('\W+',' ', page2.text ))[0]
 
-
-st_player("https://www.youtube.com/channel/UCQoNosQTIxiMTL9C-gvFdjA")
+st_player("https://www.youtube.com/watch?v=UUlWmAbA2q0")
 cols = st.columns(3)
 cols[0].metric('Followers',followers)
 cols[1].metric('Following',following)
