@@ -143,7 +143,7 @@ st.subheader('Medium Profile ✍️')
 st.markdown("""<a href={}> access full profile here</a>""".format(info['Medium']),unsafe_allow_html=True)
 page1,page2 = requests.get(info['Medium']), requests.get(info['publication_url'])
 
-followers = re.findall('(\d+) Followers',page1.text)[0]
+followers = re.findall('(\d+[A-Z]) Followers',page1.text)[0]
 following = re.findall('(\d+) Following',page1.text)[0]
 pub_followers = re.findall('Followers (?:\w+\s+){4}(\d+)',re.sub('\W+',' ', page2.text ))[0]
 
