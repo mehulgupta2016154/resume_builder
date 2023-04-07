@@ -1,0 +1,110 @@
+url,title,category1
+https://medium.com/data-science-in-your-pocket/what-are-evolutionary-algorithms-fb642f72db34,What are Evolutionary algorithms?,Misc
+https://medium.com/data-science-in-your-pocket/training-openai-gym-environments-using-reinforce-algorithm-in-reinforcement-learning-54908ebd66ad,Training OpenAI gym environments using REINFORCE algorithm in reinforcement learning,Reinforcement Learning
+https://medium.com/data-science-in-your-pocket/contextual-bandits-in-reinforcement-learning-explained-with-example-and-codes-3c707142437b,Contextual Bandits in reinforcement learning explained with example and codes,Reinforcement Learning
+https://medium.com/data-science-in-your-pocket/calculating-non-linear-correlation-using-distance-correlation-with-examples-83f6a8cf2473,Calculating Non-Linear correlation using Distance correlation with examples,Stats
+https://medium.com/data-science-in-your-pocket/conditional-gans-cgans-with-codes-explained-f2c7993d2fb2,Conditional GANs (CGANs) with codes explained,Generative AI
+https://medium.com/data-science-in-your-pocket/how-does-dall-e-the-text-to-image-generator-work-c2d9f4a0f26c,"How does DALL-E, the text-to-image generator work?",Generative AI
+https://medium.com/data-science-in-your-pocket/automl-for-multi-label-classification-using-ludwig-c7d0b4631ed8,AutoML for Multi-Label Classification using Ludwig,AutoML
+https://medium.com/data-science-in-your-pocket/music-generation-using-musictransformer-with-codes-c7be89ba85b1,Music Generation using MusicTransformer with codes,Generative AI
+https://medium.com/data-science-in-your-pocket/generative-modeling-using-pixelcnn-with-codes-explained-387c95405651,Generative modeling using PixelCNN with codes explained,Generative AI
+https://medium.com/data-science-in-your-pocket/why-should-you-blog-as-a-data-scientist-my-experience-after-writing-100-blogs-76ecbac8b9ea,Why should you blog as a Data Scientist? My experience after writing 100 blogs,Misc
+https://medium.com/data-science-in-your-pocket/handling-high-cardinality-out-of-vocabulary-and-cold-start-in-categorical-data-db93f6d09ec3,"Handling High Cardinality, Out Of Vocabulary and Cold Start in categorical data",Misc
+https://medium.com/data-science-in-your-pocket/different-methods-to-scale-numerical-features-in-datasets-with-examples-and-codes-93f5d7e60877,Methods to scale numerical features,Misc
+https://medium.com/data-science-in-your-pocket/introduction-to-machine-learning-designs-patterns-594acf390146,Introduction to Machine Learning Design Patterns,Misc
+https://medium.com/data-science-in-your-pocket/one-shot-learning-using-memory-augmented-neural-networks-manns-870004064294,One-Shot Learning using Memory Augmented Neural Networks (MANNs),One Shot Learning
+https://medium.com/data-science-in-your-pocket/neural-turing-machines-explained-9acdbe8897de,Neural Turing Machines Explained,One Shot Learning
+https://medium.com/data-science-in-your-pocket/understanding-siamese-network-with-example-and-codes-e7518fe02612,Understanding Siamese Network with example and codes,One Shot Learning
+https://medium.com/data-science-in-your-pocket/starting-off-with-one-shot-learning-609c1ac6ec9b,Starting off with One-Shot Learning,One Shot Learning
+https://medium.com/data-science-in-your-pocket/interpreting-cnns-using-lime-5a0bfb225708,Interpreting CNNs using LIME,XAI
+https://medium.com/data-science-in-your-pocket/shap-for-interpreting-ml-models-explained-with-codes-e94baf5a204e,SHAP for interpreting ML models explained with codes,XAI
+https://medium.com/data-science-in-your-pocket/lime-for-interpreting-machine-learning-models-maths-explained-with-codes-3d4226819020,LIME for interpreting machine learning models maths explained with codes,XAI
+https://medium.com/data-science-in-your-pocket/understanding-partial-dependence-plots-pdps-415346b7e7f1,Understanding Partial Dependence Plots (PDPs),XAI
+https://medium.com/data-science-in-your-pocket/understanding-generalized-additive-models-gams-for-regression-with-mathematics-a19bb9915a73,Understanding Generalized Additive Models (GAMs) for regression with mathematics,Misc
+https://medium.com/data-science-in-your-pocket/how-feature-importance-is-calculated-in-decision-trees-with-example-699dc13fc078,How feature importance is calculated in Decision Trees? with example,Misc
+https://medium.com/data-science-in-your-pocket/introduction-to-interpretable-ai-part-1-46099b5181cb,Introduction to Interpretable AIÂ : Part 1,XAI
+https://medium.com/data-science-in-your-pocket/automl-for-time-series-forecasting-using-autots-with-example-735fb559443a,AutoML for Time Series forecasting using AutoTS with example,Time Series
+https://medium.com/data-science-in-your-pocket/strategies-for-zero-sum-and-non-zero-sum-games-in-game-theory-7d4aeac0f2c8,Strategies for Zero Sum and Non-Zero Sum games in Game Theory,Game Thoery
+https://medium.com/data-science-in-your-pocket/game-theory-for-beginners-c58b9aff5054,Game Theory for beginners,Game Thoery
+https://medium.com/data-science-in-your-pocket/time-series-forecasting-using-kalman-filter-814e9171d780,Time Series Forecasting using Kalman Filter,Time Series
+https://medium.com/data-science-in-your-pocket/medium-profile-analyzer-for-writers-using-streamlit-and-python-136e12337ac0,Medium Profile Analyzer for writers using Streamlit and Python,Streamlit
+https://medium.com/data-science-in-your-pocket/auto-regressive-distributed-lag-ardl-time-series-forecasting-model-explained-fe86ffa4aab1,Auto Regressive Distributed Lag (ARDL) time series forecasting model explained,Time Series
+https://medium.com/data-science-in-your-pocket/graph-analytics-relationship-link-prediction-in-graphs-using-neo4j-79a81716e73a,Graph Analytics: Relationship (link) prediction in graphs using Neo4j,Graph algorithms
+https://medium.com/data-science-in-your-pocket/graph-analytics-detecting-communities-in-the-graph-using-neo4j-1cbceed9b4b9,Graph Analytics: Detecting communities in the graph using Neo4j,Graph algorithms
+https://medium.com/data-science-in-your-pocket/community-detection-in-a-graph-using-louvain-algorithm-with-example-7a77e5e4b079,Community detection in a graph using Louvain algorithm with example,Graph algorithms
+https://medium.com/data-science-in-your-pocket/graph-analytics-determining-important-nodes-in-a-graph-using-neo4j-bce0dc31c2c8,Graph Analytics: Determining important nodes in a graph using Neo4j,Graph algorithms
+https://medium.com/data-science-in-your-pocket/graph-analytics-pathfinding-algorithms-using-neo4j-c9bda1915077,Graph Analytics: Pathfinding algorithms using Neo4J,Graph algorithms
+https://medium.com/data-science-in-your-pocket/graph-analytics-part-1-891014c2dee4,Graph Analytics: Part 1,Graph algorithms
+https://medium.com/data-science-in-your-pocket/programmatically-labeling-data-using-snorkel-with-example-a6a322ef0f2c,Programmatically labeling data using Snorkel with example,Misc
+https://medium.com/data-science-in-your-pocket/training-custom-ner-system-using-crfs-146e0e922851,Training custom NER system using CRFs,NLP
+https://medium.com/data-science-in-your-pocket/text-vectorization-algorithms-in-nlp-109d728b2b63,Text vectorization algorithms in NLP,NLP
+https://medium.com/data-science-in-your-pocket/understanding-the-mljar-automl-framework-490391c04585,Understanding the MLJAR AutoML framework,AutoML
+https://medium.com/data-science-in-your-pocket/mathematically-determining-patterns-in-time-series-with-codes-1334954ae8eb,Mathematically determining patterns in Time Series with codes,Time Series
+https://medium.com/data-science-in-your-pocket/game-development-using-pygame-reinforcement-learning-with-example-f5b78c768610,Game development using Pygame & Reinforcement Learning with example,Reinforcement Learning
+https://medium.com/data-science-in-your-pocket/my-first-job-switch-as-a-data-scientist-ac7a61881f7b,My first job switch as a Data Scientist,Misc
+https://medium.com/data-science-in-your-pocket/building-portfolio-using-streamlit-ac215b8e74da,Building Portfolio using Streamlit,Streamlit
+https://medium.com/data-science-in-your-pocket/switching-to-cassandra-from-rdbms-e7f537064b4a,Switching to Cassandra from RDBMS,Misc
+https://medium.com/data-science-in-your-pocket/understanding-cyclegans-using-examples-codes-f5d6e1a47048,Understanding CycleGANs using examples & codes,Generative AI
+https://medium.com/data-science-in-your-pocket/understanding-gan-with-codes-225c23711840,Understanding GAN with codes,Generative AI
+https://medium.com/data-science-in-your-pocket/understanding-nash-equilibrium-with-example-10c5c5d37812,Understanding Nash Equilibrium with example,Game Thoery
+https://medium.com/data-science-in-your-pocket/understanding-autoencoders-vaes-for-data-generation-1404317d5c7a,Understanding Autoencoders (& VAEs) for data generation,Generative AI
+https://medium.com/data-science-in-your-pocket/naive-bayes-as-a-generative-model-7fcc28787188,Naive Bayes as a Generative model,Generative AI
+https://medium.com/data-science-in-your-pocket/generative-modeling-the-overview-e4c60a5b4873,Generative modeling: The overview,Generative AI
+https://medium.com/data-science-in-your-pocket/beginning-with-docker-fb94dabd7c60,Beginning with Docker,Misc
+https://medium.com/data-science-in-your-pocket/understanding-bert-variants-part-2-64ca0187373e,Understanding BERT Variants: Part 2,NLP
+https://medium.com/data-science-in-your-pocket/introducing-covid-19-snapshot-25378b6301ac,Introducing COVID-19 Snapshot,Misc
+https://medium.com/data-science-in-your-pocket/understanding-bert-variants-part-1-740fee88616,Understanding BERT Variants: Part 1,NLP
+https://medium.com/data-science-in-your-pocket/bert-a-deeper-dive-7412db7c1a93,BERT: A deeper dive,NLP
+https://medium.com/data-science-in-your-pocket/attention-is-all-you-need-understanding-with-example-c8d074c37767,Attention is all you need: understanding with example,NLP
+https://medium.com/data-science-in-your-pocket/writing-your-1st-research-paper-ba33c2bde811,Writing your 1st Research Paper,Misc
+https://medium.com/data-science-in-your-pocket/lab-reports-digitization-b579b4b7caf7,Lab Reports Digitization,Misc
+https://medium.com/data-science-in-your-pocket/association-analysis-using-apriori-algorithm-with-example-8bb2ffed9dc2,Association Analysis using Apriori Algorithm with example,Misc
+https://medium.com/data-science-in-your-pocket/different-methods-to-estimate-test-error-for-a-classifier-1b6103e28340,Different methods to estimate Test Error for a Classifier,Misc
+https://medium.com/data-science-in-your-pocket/phonetics-based-fuzzy-string-matching-algorithms-8399aea04718,Phonetics based Fuzzy string matching algorithms,NLP
+https://medium.com/data-science-in-your-pocket/fuzzy-matching-algorithms-explained-e0ff30cc00ca,Fuzzy matching algorithms explained,NLP
+https://medium.com/data-science-in-your-pocket/dimension-reduction-using-isomap-72ead0411dec,Dimension Reduction using Isomap,Dimension Reduction
+https://medium.com/data-science-in-your-pocket/random-projection-for-dimension-reduction-27d2ec7d40cd,Random Projection for Dimension Reduction,Dimension Reduction
+https://medium.com/data-science-in-your-pocket/pca-disadvantages-how-to-resolve-them-987e280441d4,PCA Disadvantages & how to resolve them,Dimension Reduction
+https://medium.com/data-science-in-your-pocket/image-preprocessing-impacts-on-ocr-c3bf7c661668,Image Preprocessing impacts on OCR,Misc
+https://medium.com/data-science-in-your-pocket/chatbots-for-beginners-understanding-rasa-ee5e6f63a2da,Chatbots for Beginners: Understanding Rasa,NLP
+https://medium.com/data-science-in-your-pocket/text-summarization-using-textrank-in-nlp-4bce52c5b390,Text summarization using TextRank in NLP,NLP
+https://medium.com/data-science-in-your-pocket/text-classification-for-beginners-in-nlp-with-codes-93c94a8b9ec0,Text Classification for Beginners in NLP with codes,NLP
+https://medium.com/data-science-in-your-pocket/is-datacamps-data-scientist-career-track-or-any-other-online-course-worth-it-7ad747da2b8d,Is DataCampâ€™s Data Scientist Career Track(or any other online course) worth it?,Misc
+https://medium.com/data-science-in-your-pocket/named-entity-recognition-ner-using-conditional-random-fields-in-nlp-3660df22e95c,Named Entity Recognition(NER) using Conditional Random Fields in NLP,NLP
+https://medium.com/data-science-in-your-pocket/dependency-parsing-associated-algorithms-in-nlp-96d65dd95d3e,Dependency parsing & associated algorithms in NLP,NLP
+https://medium.com/data-science-in-your-pocket/syntactic-constituency-parsing-using-the-cyk-algorithm-in-nlp-eff9c2912b09,Syntactic / Constituency  Parsing using the CYK algorithm in NLP,Misc
+https://medium.com/data-science-in-your-pocket/expectation-maximization-em-algorithm-explained-288626ce220e,Expectation-Maximization (EM) Algorithm explained,Misc
+https://medium.com/data-science-in-your-pocket/calculating-precision-recall-for-multi-class-classification-9055931ee229,Calculating Precision & Recall for Multi-Class Classification,Stats
+https://medium.com/data-science-in-your-pocket/pos-tagging-using-hidden-markov-models-hmm-viterbi-algorithm-in-nlp-mathematics-explained-d43ca89347c4,POS Tagging  using Hidden Markov Models (HMM) & Viterbi algorithm in NLP mathematics explained,NLP
+https://medium.com/data-science-in-your-pocket/tokenization-algorithms-in-natural-language-processing-nlp-1fceab8454af,Tokenization algorithms in Natural Language Processing (NLP),NLP
+https://medium.com/data-science-in-your-pocket/sarsa-q-learning-in-temporal-difference-for-reinforcement-learning-with-example-8bfd902a5d2,SARSA & Q Learning in Temporal Difference for Reinforcement Learning with example,Reinforcement Learning
+https://medium.com/data-science-in-your-pocket/monte-carlo-for-reinforcement-learning-with-example-1754439dd628,Monte Carlo for Reinforcement Learning with example,Reinforcement Learning
+https://medium.com/data-science-in-your-pocket/reinforcement-learning-formulation-for-markov-decision-process-and-multi-armed-bandit-bee3a6ab86ed,Reinforcement Learning formulation for Markov Decision Process and Multi Armed Bandit,Reinforcement Learning
+https://medium.com/data-science-in-your-pocket/reinforcement-learning-for-beginners-cd8a6e131d04,Reinforcement Learning for beginners,Reinforcement Learning
+https://medium.com/data-science-in-your-pocket/google-vision-ocr-detailed-analysis-ba810e5cd46,Google Vision OCR Detailed Analysis,Misc
+https://medium.com/data-science-in-your-pocket/how-to-get-your-first-data-science-intern-8a2530e27b7b,How to get your first Data Science intern?,Misc
+https://medium.com/data-science-in-your-pocket/data-visualization-for-data-science-beginners-84bacdb8d72e,Data Visualization For Data Science Beginners,Misc
+https://medium.com/data-science-in-your-pocket/vehicle-number-plate-detection-and-ocr-tcs-humain-2019-a253019e52a1,Vehicle Number Plate Detection and OCR (TCS HUMAIN 2019),Computer Vision
+https://medium.com/data-science-in-your-pocket/neural-image-assessment-nima-for-image-quality-scores-and-earth-movers-distance-da2cc87451c2,Neural Image Assessment (NIMA) for Image quality scores and Earth Moverâ€™s Distance,Computer Vision
+https://medium.com/data-science-in-your-pocket/creating-cnn-from-scratch-using-tensorflow-mnist-dataset-35ce91b787f2,Creating CNN from scratch using Tensorflow (MNIST dataset),Computer Vision
+https://medium.com/data-science-in-your-pocket/creating-your-first-neural-network-using-tensorflow-titanic-24195e8cb505,Creating Your First Neural Network using Tensorflow (Titanic),Misc
+https://medium.com/data-science-in-your-pocket/all-about-yolo-object-detection-and-its-3-versions-paper-summary-and-codes-2742d24f56e,All About YOLO Object Detection and its 3 versions (Paper Summary and Codes!!),Computer Vision
+https://medium.com/data-science-in-your-pocket/tensorflow-concepts-for-beginners-with-examples-74fecc42ae37,Tensorflow Concepts for beginners with examples,Misc
+https://medium.com/data-science-in-your-pocket/want-to-reduce-your-ml-model-size-try-tensorflow-lite-with-codes-17287fc0b2f,Want to reduce your ML model size? Try Tensorflow Lite (with codes),Misc
+https://medium.com/data-science-in-your-pocket/image-labelling-for-yolo-using-yolo-mark-c58eb75b77fd,Image Labelling for YOLO using YOLO Mark,Computer Vision
+https://medium.com/data-science-in-your-pocket/anova-mathematics-explained-c85a36172ac1,ANOVA Mathematics Explained,Stats
+https://medium.com/data-science-in-your-pocket/the-a-z-of-hypothesis-testing-b559e680d26d,The A-Z of Hypothesis Testing,Stats
+https://medium.com/data-science-in-your-pocket/various-data-distributions-in-statistics-362dc92558db,Various Data Distributions in Statistics,Stats
+https://medium.com/data-science-in-your-pocket/ensemble-models-in-machine-learning-d429c988e866,Ensemble Models in Machine Learning,Misc
+https://medium.com/data-science-in-your-pocket/20-statistics-concepts-for-data-science-beginners-f27df1d3fcfb,20+  Statistics Concepts for Data Science Beginners,Stats
+https://medium.com/data-science-in-your-pocket/adfuller-test-intuitive-explanation-for-checking-time-series-stationarity-1e37ce6d240e,ADFuller Test Intuitive explanation for checking Time Series Stationarity,Time Series
+https://medium.com/data-science-in-your-pocket/preprocessing-for-time-series-forecasting-3a331dbfb9c2,Preprocessing for Time Series Forecasting,Time Series
+https://medium.com/data-science-in-your-pocket/multivariate-time-series-using-var-f1f5058831b8,Multivariate Time Series using VAR,Time Series
+https://medium.com/data-science-in-your-pocket/holt-winters-exponential-smoothing-for-time-series-forecasting-5905fad390e5,Holt-Winters & Exponential Smoothing for Time Series Forecasting,Time Series
+https://medium.com/data-science-in-your-pocket/linear-forecasting-models-for-univariate-time-series-prediction-9bff14c2b3b3,Linear Forecasting Models for Univariate Time Series Prediction,Time Series
+https://medium.com/data-science-in-your-pocket/important-analytical-steps-for-your-data-science-projects-for-beginners-b789766017f8,11 Important Analytical Steps for your Data Science project,Misc
+https://medium.com/data-science-in-your-pocket/best-free-resources-for-data-science-for-beginners-pdf-links-available-bc878ae23161,Best Free Resources for Data Science for Beginners (pdf links available),Misc
+https://medium.com/data-science-in-your-pocket/why-time-series-has-to-be-stationary-37ca8800ddf,Why Time Series has to be STATIONARY ???,Time Series
+https://medium.com/data-science-in-your-pocket/how-a-beginner-should-approach-kaggle-6e7fd0d1bc41,How a beginner should approach Kaggle?,Misc
+https://medium.com/data-science-in-your-pocket/starting-off-with-time-series-56056c4f4b78,Getting Started with Time Series,Time Series
+https://medium.com/data-science-in-your-pocket/maze-runner-%EF%B8%8F-with-off-policy-q-learning-no-back-stepping-allowed-d01a79a6199c,Maze game with Reinforcement Learning,Reinforcement Learning
