@@ -21,9 +21,6 @@ from streamlit_player import st_player
 st.set_page_config(page_title='mehul gupta\'s portfolio' ,layout="wide",page_icon='👨‍🔬')
 
 
-with st.sidebar:
-        components.html(embed_component['linkedin'],height=310)
-
 st.sidebar.markdown(info['Stackoverflow_flair'],unsafe_allow_html=True)
 st.subheader('Summary')
 st.write(info['Brief'])
@@ -143,7 +140,7 @@ st.subheader('Medium Profile ✍️')
 st.markdown("""<a href={}> access full profile here</a>""".format(info['Medium']),unsafe_allow_html=True)
 page1,page2 = requests.get(info['Medium']), requests.get(info['publication_url'])
 
-followers = re.findall('(\d+[A-Z]) Followers',page1.text)[0]
+followers = re.findall('(\d+\.\d+[kK]?) Followers',page1.text)[0]
 following = re.findall('(\d+) Following',page1.text)[0]
 pub_followers = re.findall('Followers (?:\w+\s+){4}(\d+)',re.sub('\W+',' ', page2.text ))[0]
 
