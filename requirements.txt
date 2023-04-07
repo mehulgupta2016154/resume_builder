@@ -9,6 +9,6 @@ streamlit
 streamlit_timeline
 tensorflow
 tensorflow_addons
-keras
+keras==2.6.0
 streamlit-player
 typing-extensions
