@@ -65,14 +65,14 @@ https://medium.com/data-science-in-your-pocket/fuzzy-matching-algorithms-explain
 https://medium.com/data-science-in-your-pocket/dimension-reduction-using-isomap-72ead0411dec,Dimension Reduction using Isomap,Dimension Reduction
 https://medium.com/data-science-in-your-pocket/random-projection-for-dimension-reduction-27d2ec7d40cd,Random Projection for Dimension Reduction,Dimension Reduction
 https://medium.com/data-science-in-your-pocket/pca-disadvantages-how-to-resolve-them-987e280441d4,PCA Disadvantages & how to resolve them,Dimension Reduction
-https://medium.com/data-science-in-your-pocket/image-preprocessing-impacts-on-ocr-c3bf7c661668,Image Preprocessing impacts on OCR,Misc
+https://medium.com/data-science-in-your-pocket/image-preprocessing-impacts-on-ocr-c3bf7c661668,Image Preprocessing impacts on OCR,Computer Vision
 https://medium.com/data-science-in-your-pocket/chatbots-for-beginners-understanding-rasa-ee5e6f63a2da,Chatbots for Beginners: Understanding Rasa,NLP
 https://medium.com/data-science-in-your-pocket/text-summarization-using-textrank-in-nlp-4bce52c5b390,Text summarization using TextRank in NLP,NLP
 https://medium.com/data-science-in-your-pocket/text-classification-for-beginners-in-nlp-with-codes-93c94a8b9ec0,Text Classification for Beginners in NLP with codes,NLP
 https://medium.com/data-science-in-your-pocket/is-datacamps-data-scientist-career-track-or-any-other-online-course-worth-it-7ad747da2b8d,Is DataCampâ€™s Data Scientist Career Track(or any other online course) worth it?,Misc
 https://medium.com/data-science-in-your-pocket/named-entity-recognition-ner-using-conditional-random-fields-in-nlp-3660df22e95c,Named Entity Recognition(NER) using Conditional Random Fields in NLP,NLP
 https://medium.com/data-science-in-your-pocket/dependency-parsing-associated-algorithms-in-nlp-96d65dd95d3e,Dependency parsing & associated algorithms in NLP,NLP
-https://medium.com/data-science-in-your-pocket/syntactic-constituency-parsing-using-the-cyk-algorithm-in-nlp-eff9c2912b09,Syntactic / Constituency  Parsing using the CYK algorithm in NLP,Misc
+https://medium.com/data-science-in-your-pocket/syntactic-constituency-parsing-using-the-cyk-algorithm-in-nlp-eff9c2912b09,Syntactic / Constituency  Parsing using the CYK algorithm in NLP,NLP
 https://medium.com/data-science-in-your-pocket/expectation-maximization-em-algorithm-explained-288626ce220e,Expectation-Maximization (EM) Algorithm explained,Misc
 https://medium.com/data-science-in-your-pocket/calculating-precision-recall-for-multi-class-classification-9055931ee229,Calculating Precision & Recall for Multi-Class Classification,Stats
 https://medium.com/data-science-in-your-pocket/pos-tagging-using-hidden-markov-models-hmm-viterbi-algorithm-in-nlp-mathematics-explained-d43ca89347c4,POS Tagging  using Hidden Markov Models (HMM) & Viterbi algorithm in NLP mathematics explained,NLP
@@ -109,3 +109,4 @@ https://medium.com/data-science-in-your-pocket/how-a-beginner-should-approach-ka
 https://medium.com/data-science-in-your-pocket/starting-off-with-time-series-56056c4f4b78,Getting Started with Time Series,Time Series
 https://medium.com/data-science-in-your-pocket/deep-q-networks-dqn-explained-with-examples-and-codes-in-reinforcement-learning-928b97efa792,Deep Q Networks (DQN) explained with examples and codes in Reinforcement Learning,Reinforcement Learning
 https://medium.com/data-science-in-your-pocket/maze-runner-%EF%B8%8F-with-off-policy-q-learning-no-back-stepping-allowed-d01a79a6199c,Maze game with Reinforcement Learning,Reinforcement Learning
+https://medium.com/data-science-in-your-pocket/advantage-actor-critic-a2c-algorithm-in-reinforcement-learning-with-codes-and-examples-using-e810273c0c9e,Advantage Actor-Critic (A2C) algorithm in Reinforcement Learning with Codes and Examples using OpenAI Gym, Reinforcement Learning
