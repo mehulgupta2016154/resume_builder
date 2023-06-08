@@ -139,7 +139,7 @@ st.markdown('<ul>'+achievement_list+'</ul>',unsafe_allow_html=True)
 
 st.subheader('Medium Profile ✍️')
 st.markdown("""<a href={}> access full profile here</a>""".format(info['Medium']),unsafe_allow_html=True)
-page1,page2 = requests.get(info['Medium']), requests.get(info['publication_url'])
+'''page1,page2 = requests.get(info['Medium']), requests.get(info['publication_url'])
 
 followers = re.findall('(\d+\.\d+[kK]?) Followers',page1.text)[0]
 following = re.findall('(\d+) Following',page1.text)[0]
@@ -148,7 +148,7 @@ pub_followers = re.findall('Followers (?:\w+\s+){4}(\d+)',re.sub('\W+',' ', page
 cols = st.columns(3)
 cols[0].metric('Followers',followers)
 cols[1].metric('Following',following)
-cols[2].metric('Publication followers',pub_followers)
+cols[2].metric('Publication followers',pub_followers)'''
 
 with st.expander('read my latest blogs below'):
     components.html(embed_component['medium'],height=500)
