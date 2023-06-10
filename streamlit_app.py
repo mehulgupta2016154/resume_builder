@@ -21,7 +21,7 @@ from streamlit_player import st_player
 
 st.set_page_config(page_title='mehul gupta\'s portfolio' ,layout="wide",page_icon='👨‍🔬')
 
-
+st.write('NOTE: Reload if getting any import errors whiles loading')
 st.sidebar.markdown(info['Stackoverflow_flair'],unsafe_allow_html=True)
 st.subheader('Summary')
 st.write(info['Brief'])
