@@ -15,8 +15,6 @@ import matplotlib.pyplot as plt
 import streamlit.components.v1 as components
 from graph_builder import *
 import tensorflow as tf
-from cycle import *
-from vanilla_gan import return_decoder
 from streamlit_player import st_player
 
 st.set_page_config(page_title='mehul gupta\'s portfolio' ,layout="wide",page_icon='👨‍🔬')
@@ -139,14 +137,17 @@ st.markdown('<ul>'+achievement_list+'</ul>',unsafe_allow_html=True)
 st.subheader('Medium Profile ✍️')
 st.markdown("""<a href={}> access full profile here</a>""".format(info['Medium']),unsafe_allow_html=True)
 
-page1,page2 = requests.get(info['Medium']), requests.get(info['publication_url'])
-
-followers = re.findall('(\d+\.\d+[kK]?) Followers',page1.text)[0]
-pub_followers = re.findall('Followers (?:\w+\s+){4}(\d+)',re.sub('\W+',' ', page2.text ))[0]
-
-cols = st.columns(2)
-cols[0].metric('Followers',followers)
-cols[1].metric('Publication followers',pub_followers)
+try:
+        page1,page2 = requests.get(info['Medium']), requests.get(info['publication_url'])
+        
+        followers = re.findall('(\d+\.\d+[kK]?) Followers',page1.text)[0]
+        pub_followers = re.findall('Followers (?:\w+\s+){4}(\d+)',re.sub('\W+',' ', page2.text ))[0]
+        
+        cols = st.columns(2)
+        cols[0].metric('Followers',followers)
+        cols[1].metric('Publication followers',pub_followers)
+except:
+    pass
 
 with st.expander('read my latest blogs below'):
     components.html(embed_component['medium'],height=500)
@@ -169,58 +170,64 @@ st.graphviz_chart(graph)
 st.subheader('Time for some ML')
 st.caption('As training GANs is a computationally heavy task, the below 2 models have been trained just to produce acceptable results for the sake of demonstration')
         
-selection = st.radio('Choose one of the two models',models)
-if selection == models[0]:
-    input_ = st.slider('How many random samples you wish to generate?',0,15)
-    if input_:
-        with st.spinner('loading random samples generated...'):
-                noise = tf.random.normal((input_,4),mean=0,stddev=1)
-                st.caption('random noise array generated')
-                st.write(noise.numpy())
-                decoder_v = return_decoder()
-                images = iter(decoder_v(noise,training=False))
-                row, cols = input_//4,input_%4
-                if cols:
-                    row+=1
-                for x in range(row):
-                    if (x-1)<row:
-                        columns = st.columns(4)
-                    else:
-                        columns = st.columns(cols)
-                    for index_ in range(len(columns)):
-                        try:
-                            img = next(images)
-                        except:
-                            break
-                        fig,ax = plt.subplots()
-                        ax.imshow(img)
-                        columns[index_].pyplot(fig)
-                    
-elif selection==models[1]:
-    selected_model = st.selectbox('select one transition',cycle_models) 
-    if selected_model:
-        with st.spinner('loading default sample ...'):
-                    data_ = []
-                    for images in cycle_model_url[selected_model]:
+try:
+        from cycle import *
+        from vanilla_gan import return_decoder
+        
+        selection = st.radio('Choose one of the two models',models)
+        if selection == models[0]:
+            input_ = st.slider('How many random samples you wish to generate?',0,15)
+            if input_:
+                with st.spinner('loading random samples generated...'):
+                        noise = tf.random.normal((input_,4),mean=0,stddev=1)
+                        st.caption('random noise array generated')
+                        st.write(noise.numpy())
+                        decoder_v = return_decoder()
+                        images = iter(decoder_v(noise,training=False))
+                        row, cols = input_//4,input_%4
+                        if cols:
+                            row+=1
+                        for x in range(row):
+                            if (x-1)<row:
+                                columns = st.columns(4)
+                            else:
+                                columns = st.columns(cols)
+                            for index_ in range(len(columns)):
+                                try:
+                                    img = next(images)
+                                except:
+                                    break
+                                fig,ax = plt.subplots()
+                                ax.imshow(img)
+                                columns[index_].pyplot(fig)
                             
-          
-                            img = Image.open(images)
-                            image = img.resize((128,128))
-                            data_.append(np.array(image))
-                            
-                    st.image(data_,caption=[x for x in range(len(data_))],width=250,clamp=True)
-                    selected_images = st.multiselect('Choose images for transition',[x+1 for x in range(len(data_))])
-                    if selected_images:
-                        data_=[data_[int(x)-1] for x in selected_images]
-                        dataset = tf.data.Dataset.from_tensor_slices({'image':data_})
-                        dataset = dataset.map(preprocess).batch(n_batch).__iter__()
-                        samples,_ = generate_real(next(dataset),n_batch,0)
-                        if selected_model==cycle_models[0]:
-                                        images,_ = generate_fake(samples, generator_B_A,n_batch,0)
-                        elif selected_model==cycle_models[1]:
-                                        images,_ = generate_fake(samples, generator_A_B,n_batch,0)
-                        images = images.numpy()
-                        st.image(images,clamp=True,width=250)
+        elif selection==models[1]:
+            selected_model = st.selectbox('select one transition',cycle_models) 
+            if selected_model:
+                with st.spinner('loading default sample ...'):
+                            data_ = []
+                            for images in cycle_model_url[selected_model]:
+                                    
+                  
+                                    img = Image.open(images)
+                                    image = img.resize((128,128))
+                                    data_.append(np.array(image))
+                                    
+                            st.image(data_,caption=[x for x in range(len(data_))],width=250,clamp=True)
+                            selected_images = st.multiselect('Choose images for transition',[x+1 for x in range(len(data_))])
+                            if selected_images:
+                                data_=[data_[int(x)-1] for x in selected_images]
+                                dataset = tf.data.Dataset.from_tensor_slices({'image':data_})
+                                dataset = dataset.map(preprocess).batch(n_batch).__iter__()
+                                samples,_ = generate_real(next(dataset),n_batch,0)
+                                if selected_model==cycle_models[0]:
+                                                images,_ = generate_fake(samples, generator_B_A,n_batch,0)
+                                elif selected_model==cycle_models[1]:
+                                                images,_ = generate_fake(samples, generator_A_B,n_batch,0)
+                                images = images.numpy()
+                                st.image(images,clamp=True,width=250)
+except:
+    pass
 
 st.sidebar.caption('Wish to connect?')
 st.sidebar.write('📧: mehulgupta2016154@gmail.com')
