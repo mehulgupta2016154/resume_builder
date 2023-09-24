@@ -14,7 +14,7 @@ import io
 import matplotlib.pyplot as plt
 import streamlit.components.v1 as components
 from graph_builder import *
-import tensorflow as tf
+#import tensorflow as tf
 from streamlit_player import st_player
 
 st.set_page_config(page_title='mehul gupta\'s portfolio' ,layout="wide",page_icon='👨‍🔬')
@@ -166,7 +166,8 @@ cols[2].metric('Views',str(float(views)//1000)+'K')
         
 st.subheader('Daily routine as Data Scientist')
 st.graphviz_chart(graph)
-        
+
+'''        
 try:
         st.subheader('Time for some ML')
         st.caption('As training GANs is a computationally heavy task, the below 2 models have been trained just to produce acceptable results for the sake of demonstration')
@@ -227,6 +228,7 @@ try:
                                 st.image(images,clamp=True,width=250)
 except:
     pass
+'''
 
 st.sidebar.caption('Wish to connect?')
 st.sidebar.write('📧: mehulgupta2016154@gmail.com')
