@@ -2,13 +2,9 @@ graphviz
 matplotlib
 numpy
 pandas
-Pillow
 plotly
 requests
 streamlit
 streamlit_timeline
-tensorflow
-tensorflow_addons
-keras==2.6.0
 streamlit-player
 typing-extensions
