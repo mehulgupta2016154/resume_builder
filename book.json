@@ -1,0 +1,39 @@
+{
+    "events": [
+      {
+        "media": {
+          "url": "https://drive.google.com/file/d/170QskHT3oO7WiPfElG7RM13CpXwhBjrD/view?usp=sharing"
+        },
+        "text": {
+          "headline": "#3 Amazon Bestseller"      
+          }
+      },
+      {
+        "media": {
+          "url": "https://drive.google.com/file/d/1Rmq1Y_Ea3TFkgq6TfXO9VDk2z8aL5qRX/view?usp=sharing"
+        },
+        "text": {
+          "headline": "#1 Amazon Hottest Arrival"
+        }
+      },
+      {
+        
+        "media": {
+            "url": "https://drive.google.com/file/d/1S27iq1_ag6LyyZ-o8MXzzz6_seXtkM_p/view?usp=sharing"
+          },
+        "text": {
+          "headline": "Best Ranking reached sales wise"
+        }
+      },
+      {
+        "media": {
+          "url": "https://drive.google.com/file/d/1FDW7ixysXHZMRf_08s821DEoQOV09q49/view?usp=sharing"
+       
+        },
+        "text": {
+          "headline": "Receiving Rave Reviews"
+        }
+      }
+    
+    ]
+  }

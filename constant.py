@@ -16,6 +16,8 @@ rapid_metrics = pd.DataFrame([['printed',91.6,70,79.4],['handwritten',21.1,34.7,
 rapid_metrics = rapid_metrics.set_index(['category'])
 
 skill_col_size = 5
+
+books = {'amazon.com':'https://www.amazon.com/LangChain-your-Pocket-Generative-Applications-ebook/dp/B0CTHQHT25','gumroad':'https://mehulgupta.gumroad.com/l/hmayz','amazon.in':'https://www.amazon.in/dp/B0CTHQHT25'}
 embed_component= {'linkedin':"""<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
         <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="mehulgupta7991" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/mehulgupta7991?trk=profile-badge"></a></div>""", 'medium':"""<div style="overflow-y: scroll; height:500px;"> <div id="retainable-rss-embed" 
 data-rss="https://medium.com/feed/retainable,https://medium.com/feed/data-science-in-your-pocket"
@@ -26,5 +28,47 @@ data-readmore="Read the rest"
 data-buttonclass="btn btn-primary" 
 data-offset="0"></div></div> <script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>"""}
 
+book_details="""<body>
 
+<h3>Key Features:</h3>
+<ul>
+  <li>Step-by-step code explanations with expected outputs using GPT4 for each solution.</li>
+  <li>No prerequisites: If you know Python, you can dive in.</li>
+  <li>Practical, hands-on guide with minimal mathematical explanations.</li>
+  <li>Apart from OpenAI API, it shows how to use local LLMs and Hugging Face API (free).</li>
+  <li>The price is quite affordable compared to other similar books to make it accessible for all.</li>
+</ul>
 
+<h3>What It Covers:</h3>
+<p>This beginner-friendly introduction covers:</p>
+<ul>
+  <li>Basics of Large Language Models (LLMs) and why LangChain is pivotal.</li>
+  <li>Hello World tutorial for setting up LangChain and creating baseline applications.</li>
+  <li>In-depth chapters on each LangChain module.</li>
+  <li>Advanced problem-solving, including Multi-Document RAG, Hallucinations, NLP chains, and Evaluation for LLMs for supervised and unsupervised ML problems.</li>
+  <li>Dedicated sections for Few-Shot Learning, Advanced Prompt Engineering using ReAct, Autonomous AI agents, and deployment using LangServe.</li>
+</ul>
+
+<h3>Who Should Read It?</h3>
+<p>This book is for anyone keen on exploring AI, especially Generative AI. Whether you’re a Software Developer, Data Scientist, Student, or Content Writer, the focus on diverse use cases in LangChain and GenAI makes it equally valuable to all.</p>
+
+<h3>Table of Contents</h3>
+<ul>
+<li>Introduction</li>
+<li>Hello World</li>
+<li>Different LangChain Modules</li>
+  <li>Models & Prompts</li>
+  <li>Chains</li>
+  <li>Agents</li>
+  <li>OutputParsers & Memory</li>
+  <li>Callbacks</li>
+  <li>RAG Framework & Vector Databases</li>
+  <li>LangChain for NLP problems</li>
+  <li>Handling LLM Hallucinations</li>
+  <li>Evaluating LLMs</li>
+  <li>Advanced Prompt Engineering</li>
+  <li>Autonomous AI agents</li>
+  <li>LangSmith & LangServe</li>
+</ul>
+
+</body>"""
