@@ -166,12 +166,10 @@ st.markdown("""<a href={}> access channel here</a>""".format(info['youtube_url']
 page1,page2 = requests.get(info['youtube_url']), requests.get(info['youtube_about'])
 subs = re.findall('(\d+\.\d+[kK]?) subscribers',page1.text)[0]
 videos = re.findall( r'"videosCountText".*?"text":"(\d+)"',page1.text)[0]
-views = re.findall( r'"viewCountText".*?"simpleText":"(\d+)',page2.text.replace(',',''))[0]
 
-cols = st.columns(3)
+cols = st.columns(2)
 cols[0].metric('Subscribers',subs)
 cols[1].metric('Videos',videos)
-cols[2].metric('Views',str(float(views)//1000)+'K')
         
 st.subheader('Daily routine as Data Scientist')
 st.graphviz_chart(graph)
