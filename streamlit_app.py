@@ -20,14 +20,23 @@ from streamlit_player import st_player
 st.set_page_config(page_title='mehul gupta\'s portfolio' ,layout="wide",page_icon='👨‍🔬')
 
 st.sidebar.markdown(info['Stackoverflow_flair'],unsafe_allow_html=True)
-st.subheader('Summary')
+
+st.header('My Debut book on Generative AI is out !!')
+st.info("""LangChain in your Pocket: Beginner's Guide to Building Generative AI Applications using LLMs""")
+
+st.image('images/book.png')
+
+with st.expander("Book details"):
+    st.image('images/amazon.png')
+    st.markdown(book_details,unsafe_allow_html=True)
+with st.expander("How to buy?"):
+    for a,b in books.items():
+            st.markdown("""<a href={}><b><u>{}</b></u></a>""".format(b,a),unsafe_allow_html=True)
+            
+st.subheader('About me')
 st.write(info['Brief'])
-
-
 st.subheader('Career snapshot')
-
-
-    
+  
 with st.spinner(text="Building line"):
     with open('timeline.json', "r") as f:
         data = f.read()
@@ -169,6 +178,7 @@ st.graphviz_chart(graph)
 
 st.sidebar.caption('Wish to connect?')
 st.sidebar.write('📧: mehulgupta2016154@gmail.com')
+
 pdfFileObj = open('pdfs/mehul_gupta_resume.pdf', 'rb')
 st.sidebar.download_button('download resume',pdfFileObj,file_name='mehul_gupta_resume.pdf',mime='pdf')
 
