@@ -1,28 +1,37 @@
 url,title,category1
-https://medium.com/data-science-in-your-pocket/improving-rag-using-langgraph-and-langchain-bb195bfe4b44,Improving RAG using LangGraph and LangChain,LLM|Langchain
+https://medium.com/data-science-in-your-pocket/kolmogorov-arnold-networks-kans-explained-a-superior-alternative-to-mlps-8bc781e3f9c8,Kolmogorov-Arnold Networks (KANs) Explained: A Superior Alternative to MLPs,Other technical
+https://medium.com/data-science-in-your-pocket/gpt-4o-by-openai-is-out-f7f6e0c6c56d,GPT-4o by OpenAI : Things to know,LLM|Generative AI
+https://medium.com/data-science-in-your-pocket/dspy-for-beginners-auto-prompt-engineering-using-programming-5b6005228e64,DSPy for beginners: Auto Prompt Engineering using Programming,LLM|Generative AI
+https://medium.com/data-science-in-your-pocket/how-to-write-your-1st-technical-book-part-3-564590a7a772,How to write your 1st Technical book? Part 3,beginners|Other non technical|book
+https://medium.com/data-science-in-your-pocket/multi-agent-movie-scripting-using-generative-ai-with-codes-ab9df05f5480,Multi-Agent Movie Scripting using Generative AI with codes,LLM|Langchain|Generative AI
+https://medium.com/data-science-in-your-pocket/how-to-write-your-1st-technical-book-part-2-8bf5acfc6f94,How to write your 1st Technical book? Part 2,beginners|Other non technical|book
+https://medium.com/data-science-in-your-pocket/multi-agent-orchestration-conversations-using-autogen-crewai-and-langgraph-3ca1c7026eaf,Multi-Agent Orchestration & Conversations using Autogen, CrewAI and LangGraph,LLM|Langchain|Generative AI
+https://medium.com/data-science-in-your-pocket/local-llms-using-ollama-3f631b855e8f,Local LLMs using Ollama,LLM|Generative AI
+https://medium.com/data-science-in-your-pocket/multi-agent-conversation-debates-using-langgraph-and-langchain-9f4bf711d8ab,Multi-Agent Conversation & Debates using LangGraph and LangChain,LLM|Langchain|Generative AI
+https://medium.com/data-science-in-your-pocket/improving-rag-using-langgraph-and-langchain-bb195bfe4b44,Improving RAG using LangGraph and LangChain,LLM|Langchain|Generative AI
 https://medium.com/data-science-in-your-pocket/what-are-1-bit-llms-3f2ae4b40fdf,What are 1-bit LLMs?,LLM
-https://medium.com/data-science-in-your-pocket/best-chatgpt-alternatives-8292640668a2,Best ChatGPT Alternatives,LLM|Langchain
-https://medium.com/data-science-in-your-pocket/rag-framework-explained-and-faqs-d956ea0a6d16,RAG Framework explained and FAQs,LLM|Langchain
+https://medium.com/data-science-in-your-pocket/best-chatgpt-alternatives-8292640668a2,Best ChatGPT Alternatives,LLM|Langchain|Generative AI
+https://medium.com/data-science-in-your-pocket/rag-framework-explained-and-faqs-d956ea0a6d16,RAG Framework explained and FAQs,LLM|Langchain|Generative AI
 https://medium.com/data-science-in-your-pocket/how-to-write-your-1st-technical-book-part-1-cfafd7920a7a,How to write your 1st technical book? Part 1,beginners|Other non technical|book
-https://medium.com/data-science-in-your-pocket/my-first-book-langchain-in-your-pocket-is-out-9a1f156c0f7b,My first book LangChain in your Pocket is Out!,beginners|book|Other non technical|Langchain
+https://medium.com/data-science-in-your-pocket/my-first-book-langchain-in-your-pocket-is-out-9a1f156c0f7b,My first book LangChain in your Pocket is Out!,beginners|Generative AI|book|Other non technical|Langchain
 https://medium.com/data-science-in-your-pocket/deepwalk-graph-algorithm-explained-with-examples-and-codes-405997722348,DeepWalk graph algorithm explained with examples and codes,Graph Learning
 https://medium.com/data-science-in-your-pocket/graph-neural-networks-for-beginners-6c22940d125e,Graph Neural Networks for Beginners,beginners|Graph algorithms
 https://medium.com/p/44af199dc755,What is Random Walk?,Stats
 https://medium.com/p/6c22940d125e,Graph Neural Networks for Beginners,beginners|Graph algorithms
-https://medium.com/data-science-in-your-pocket/what-are-llms-understanding-different-llm-families-48b030c2e4fb,What are LLMs? Understanding different LLM families,LLM|beginners
-https://medium.com/data-science-in-your-pocket/react-chain-of-thoughts-and-trees-of-thoughts-explained-with-example-b9ac88621f2c,ReAct Chain of Thoughts and Trees of Thoughts explained with example,LLM
+https://medium.com/data-science-in-your-pocket/what-are-llms-understanding-different-llm-families-48b030c2e4fb,What are LLMs? Understanding different LLM families,LLM|beginners|Generative AI
+https://medium.com/data-science-in-your-pocket/react-chain-of-thoughts-and-trees-of-thoughts-explained-with-example-b9ac88621f2c,ReAct Chain of Thoughts and Trees of Thoughts explained with example,LLM|Generative AI
 https://medium.com/data-science-in-your-pocket/multi-label-classification-for-beginners-with-codes-6b098cc76f99,Multi-label classification for beginners with codes,Other technical|beginners
-https://medium.com/data-science-in-your-pocket/prompt-engineering-for-beginners-with-89f60dd1ecb2,Prompt Engineering for beginners,LLM|beginners
-https://medium.com/data-science-in-your-pocket/best-prompt-engineering-hacks-to-know-549aaf57e55b,Best Prompt Engineering hacks to know,LLM
-https://medium.com/data-science-in-your-pocket/lora-for-fine-tuning-llms-explained-with-codes-and-example-62a7ac5a3578,LoRA for Fine-Tuning LLMs explained with codes and example,LLM
-https://medium.com/data-science-in-your-pocket/best-multi-modal-models-to-know-0cde63ae9f06,Best Multi-Modal models to know,LLM
+https://medium.com/data-science-in-your-pocket/prompt-engineering-for-beginners-with-89f60dd1ecb2,Prompt Engineering for beginners,LLM|beginners|Generative AI
+https://medium.com/data-science-in-your-pocket/best-prompt-engineering-hacks-to-know-549aaf57e55b,Best Prompt Engineering hacks to know,LLM|Generative AI
+https://medium.com/data-science-in-your-pocket/lora-for-fine-tuning-llms-explained-with-codes-and-example-62a7ac5a3578,LoRA for Fine-Tuning LLMs explained with codes and example,LLM|Generative AI
+https://medium.com/data-science-in-your-pocket/best-multi-modal-models-to-know-0cde63ae9f06,Best Multi-Modal models to know,LLM|Generative AI
 https://medium.com/data-science-in-your-pocket/best-ai-agents-you-should-know-db403b7469c9,Best AI-Agents you should know,LLM
 https://medium.com/data-science-in-your-pocket/what-is-agi-artificial-general-intelligence-exploring-autonomous-ai-agents-37c9df356e57,What is AGI (Artificial General Intelligence)? Exploring autonomous AI agents,LLM
 https://medium.com/data-science-in-your-pocket/recommendation-systems-using-langchain-and-llms-with-codes-d3c4c4e66732,Recommendation Systems using Langchain and LLMs with codes,LLM|Langchain|Recommendation Systems
-https://medium.com/data-science-in-your-pocket/understanding-the-langchain-framework-2bd57d177dbe,Understanding the Langchain Framework,LLM|Langchain
-https://medium.com/data-science-in-your-pocket/what-are-vector-databases-and-how-langchain-uses-vector-dbs-2abb18617ded,What are Vector Databases and How Langchain uses Vector DBs,LLM|Langchain
+https://medium.com/data-science-in-your-pocket/understanding-the-langchain-framework-2bd57d177dbe,Understanding the Langchain Framework,LLM|Langchain|Generative AI
+https://medium.com/data-science-in-your-pocket/what-are-vector-databases-and-how-langchain-uses-vector-dbs-2abb18617ded,What are Vector Databases and How Langchain uses Vector DBs,LLM|Langchain|Generative AI
 https://medium.com/data-science-in-your-pocket/deepfm-for-recommendation-systems-explained-with-codes-c200063990f7,DeepFM for recommendation systems explained with codes,Recommendation Systems
-https://medium.com/data-science-in-your-pocket/langchain-tutorials-for-newbies-945319df04e2,Langchain tutorials for newbies,LLM|Langchain
+https://medium.com/data-science-in-your-pocket/langchain-tutorials-for-newbies-945319df04e2,Langchain tutorials for newbies,LLM|Langchain|Generative AI
 https://medium.com/data-science-in-your-pocket/tips-and-tricks-to-get-started-on-medium-ec3b8d2f307c,Tips and Tricks to get started on Medium,Other non technical|beginners
 https://medium.com/data-science-in-your-pocket/recommendation-systems-using-factorization-machines-with-examples-and-codes-48a8dcb9d5ea,Recommendation Systems using Factorization Machines with examples and codes,Recommendation Systems
 https://medium.com/data-science-in-your-pocket/recommendation-systems-using-neural-collaborative-filtering-ncf-explained-with-codes-21a97e48a2f7,Recommendation Systems using Neural Collaborative Filtering (NCF) explained with codes,Recommendation Systems
