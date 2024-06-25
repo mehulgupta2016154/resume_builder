@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import os
+import streamlit.components.v1 as components
 
 st.error('My debut book on Generative AI is out', icon="📕")
 name="LangChain in your Pocket: Beginner's Guide to Building Generative AI Applications using LLMs"
@@ -8,9 +9,9 @@ url="https://medium.com/data-science-in-your-pocket/my-first-book-langchain-in-y
 st.markdown("""<a href={}><b><u>{}</b></u></a>""".format(url,name),unsafe_allow_html=True)
 
 st.error('My AI Podcast, AIQ is out now', icon="🎤")
-name="AIQ : Artificial Intelligence Quotient"
-url="https://www.youtube.com/watch?v=Qj_hlIRZiJg&list=PLnH2pfPCPZsIH5TUPuyu2fVbJDYjK1RVw"
-st.markdown("""<a href={}><b><u>{}</b></u></a>""".format(url,name),unsafe_allow_html=True)
+name = "AIQ : Artificial Intelligence Quotient"
+url = "https://www.youtube.com/watch?v=Qj_hlIRZiJg&list=PLnH2pfPCPZsIH5TUPuyu2fVbJDYjK1RVw"
+components.html(f"""<a href="{url}" target="_blank"><b><u>{name}</u></b></a>""", height=30)
 
 st.header('My Blogs')
 path = os.getcwd()+'/pdfs/my_blogs.csv'
