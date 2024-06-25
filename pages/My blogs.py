@@ -7,6 +7,11 @@ name="LangChain in your Pocket: Beginner's Guide to Building Generative AI Appli
 url="https://medium.com/data-science-in-your-pocket/my-first-book-langchain-in-your-pocket-is-out-9a1f156c0f7b"
 st.markdown("""<a href={}><b><u>{}</b></u></a>""".format(url,name),unsafe_allow_html=True)
 
+st.error('My AI Podcast, AIQ is out now', icon="📕")
+name="AIQ : Artificial Intelligence Quotient"
+url="https://www.youtube.com/watch?v=Qj_hlIRZiJg&list=PLnH2pfPCPZsIH5TUPuyu2fVbJDYjK1RVw"
+st.markdown("""<a href={}><b><u>{}</b></u></a>""".format(url,name),unsafe_allow_html=True)
+
 st.header('My Blogs')
 path = os.getcwd()+'/pdfs/my_blogs.csv'
 df = pd.read_csv(path)
